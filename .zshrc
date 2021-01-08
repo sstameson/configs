@@ -21,6 +21,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# export PATH=/Users/sstameson/anaconda3/bin:/Users/sstameson/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:~/Courses/nand2tetris/tools
-
-# eval "$(/usr/libexec/path_helper)"
