@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'dense-analysis/ale'    " Linting
+Plug 'godlygeek/tabular'     " Tab alignment
 
 Plug 'itchyny/lightline.vim' " Status bar
 Plug 'morhetz/gruvbox'       " Colorscheme
@@ -29,6 +30,7 @@ set noerrorbells visualbell t_vb= " Disable audible bell
 set mouse+=a                      " Enable mouse support
 set noshowmode                    " Hide redundant mode information
 set scrolloff=5                   " Always show 5 lines above/below cursor
+set hidden                        " Allow hidden buffers
 
 " Use tab character for Makefiles
 autocmd FileType make setlocal noexpandtab 
