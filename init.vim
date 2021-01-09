@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'dense-analysis/ale'    " Linting
-Plug 'godlygeek/tabular'     " Tab alignment
 
 Plug 'itchyny/lightline.vim' " Status bar
 Plug 'morhetz/gruvbox'       " Colorscheme
@@ -12,7 +11,7 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 syntax on
 
-let mapleader = " "
+let mapleader = ' '
 
 set tabstop=4                     " Set tab character width
 set softtabstop=4                 " Set tab key press width
@@ -48,13 +47,13 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" " Copy to clipboard
+" Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y
 nnoremap  <leader>yy  "+yy
 
-" " Paste from clipboard
+" Paste from clipboard
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
@@ -70,9 +69,6 @@ cnoremap <C-j> <C-c>
 onoremap <C-j> <Esc>
 lnoremap <C-j> <Esc>
 tnoremap <C-j> <Esc>
-
-" esc in insert mode
-inoremap kj <esc>
 
 " Try to prevent bad habits like using the arrow keys for movement
 nnoremap <Left>  :echoe "Use h"<CR>
