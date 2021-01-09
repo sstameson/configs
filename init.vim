@@ -18,7 +18,7 @@ set shiftwidth=4                  " Set indent size
 set expandtab                     " Insert spaces instead of tab characters
 set autoindent smartindent        " Make indents smart
 set colorcolumn=80                " Create marker at column 80
-set number                        " Show line numbers
+set number relativenumber         " Show relative line numbers
 set laststatus=2                  " Always show status line
 set backspace=indent,eol,start    " Make backspace reasonable
 set hidden                        " Allow hidden buffers
