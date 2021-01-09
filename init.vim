@@ -11,8 +11,6 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 syntax on
 
-let mapleader = ' '
-
 set tabstop=4                     " Set tab character width
 set softtabstop=4                 " Set tab key press width
 set shiftwidth=4                  " Set indent size
@@ -41,6 +39,9 @@ nmap Q <Nop>
 " Unset the 'last search pattern' register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
+" Map leader key to space
+let mapleader = ' '
+
 " Remap window switching
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -58,17 +59,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
-
-" Use <C-j> as Esc
-nnoremap <C-j> <Esc>
-inoremap <C-j> <Esc>
-vnoremap <C-j> <Esc>
-snoremap <C-j> <Esc>
-xnoremap <C-j> <Esc>
-cnoremap <C-j> <C-c>
-onoremap <C-j> <Esc>
-lnoremap <C-j> <Esc>
-tnoremap <C-j> <Esc>
 
 " Try to prevent bad habits like using the arrow keys for movement
 nnoremap <Left>  :echoe "Use h"<CR>
