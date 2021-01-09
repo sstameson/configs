@@ -1,7 +1,12 @@
 # Aliases
+
+# Always open Neovim
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+
+# Better git log
+alias lg='git log --graph --decorate --all'
 
 # Enable syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
