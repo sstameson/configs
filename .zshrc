@@ -3,6 +3,8 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
+alias ocaml='rlwrap ocaml'
+
 # Enable syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -23,3 +25,7 @@ unset __conda_setup
 
 conda deactivate
 conda activate base
+
+# opam configuration
+test -r /Users/sstameson/.opam/opam-init/init.zsh && . /Users/sstameson/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
