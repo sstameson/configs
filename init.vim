@@ -1,10 +1,13 @@
 call plug#begin()
 
-Plug 'dense-analysis/ale'    " Linting
-Plug 'godlygeek/tabular'     " Tab alignment
+Plug 'dense-analysis/ale'                       " Linting
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
+Plug 'godlygeek/tabular'                        " Tab alignment
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-Plug 'itchyny/lightline.vim' " Status bar
-Plug 'morhetz/gruvbox'       " Colorscheme
+Plug 'itchyny/lightline.vim'                    " Status bar
+Plug 'morhetz/gruvbox'                          " Colorscheme
 
 call plug#end()
 
@@ -41,6 +44,9 @@ nmap Q <Nop>
 " Unset the 'last search pattern' register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
+" Ctrl + P opens fuzzy finder
+map <C-p> :Files<CR>
+
 " Map leader key to space
 let mapleader = ' '
 
@@ -61,14 +67,4 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
-
-" Try to prevent bad habits like using the arrow keys for movement
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
