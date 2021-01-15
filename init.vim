@@ -1,13 +1,13 @@
 call plug#begin()
 
-Plug 'dense-analysis/ale'                       " Linting
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
-Plug 'godlygeek/tabular'                        " Tab alignment
+Plug 'dense-analysis/ale'                           " Linting
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Autocomplete
+Plug 'godlygeek/tabular'                            " Tab alignment
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'                             " Fuzzy finding
 
-Plug 'itchyny/lightline.vim'                    " Status bar
-Plug 'morhetz/gruvbox'                          " Colorscheme
+Plug 'itchyny/lightline.vim'                        " Status bar
+Plug 'morhetz/gruvbox'                              " Colorscheme
 
 call plug#end()
 
