@@ -1,7 +1,7 @@
 call plug#begin()
 
 Plug 'dense-analysis/ale'                           " Linting
-Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Autocomplete
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Autocomplete
 Plug 'godlygeek/tabular'                            " Tab alignment
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                             " Fuzzy finding
@@ -11,8 +11,8 @@ Plug 'morhetz/gruvbox'                              " Colorscheme
 
 call plug#end()
 
+let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
 syntax on
 
 set tabstop=4                     " Set tab character width
@@ -37,6 +37,10 @@ set hidden                        " Allow hidden buffers
 
 " Use tab character for Makefiles
 autocmd FileType make setlocal noexpandtab 
+" Change indent size for OCaml
+autocmd FileType ocaml setlocal tabstop=2
+autocmd FileType ocaml setlocal softtabstop=2
+autocmd FileType ocaml setlocal shiftwidth=2
 
 " Disable 'Q' (enters Ex mode)
 nmap Q <Nop>
