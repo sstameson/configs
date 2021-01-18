@@ -15,8 +15,6 @@ if has('termguicolors')
 endif
 let base16colorspace=256
 colorscheme base16-tomorrow-night
-" let g:gruvbox_contrast_dark="hard"
-" colorscheme gruvbox
 syntax on
 
 set tabstop=4                     " Set tab character width
@@ -56,6 +54,9 @@ map <C-p> :Files<CR>
 
 " Map leader key to space
 let mapleader = ' '
+
+" <leader><leader> toggles between last two open buffers
+nnoremap <leader><leader> <c-^>
 
 " Remap window switching
 nnoremap <leader>h :wincmd h<CR>
