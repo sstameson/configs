@@ -1,18 +1,22 @@
 call plug#begin()
 
-Plug 'dense-analysis/ale'                           " Linting
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Autocomplete
+Plug 'dense-analysis/ale'                           " Linting engine
 Plug 'godlygeek/tabular'                            " Tab alignment
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                             " Fuzzy finding
 
 Plug 'itchyny/lightline.vim'                        " Status bar
-Plug 'morhetz/gruvbox'                              " Colorscheme
+Plug 'chriskempson/base16-vim'                      " Colorscheme
 
 call plug#end()
 
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+if has('termguicolors')
+    set termguicolors
+endif
+let base16colorspace=256
+colorscheme base16-tomorrow-night
+" let g:gruvbox_contrast_dark="hard"
+" colorscheme gruvbox
 syntax on
 
 set tabstop=4                     " Set tab character width
@@ -20,27 +24,26 @@ set softtabstop=4                 " Set tab key press width
 set shiftwidth=4                  " Set indent size
 set expandtab                     " Insert spaces instead of tab characters
 set autoindent smartindent        " Make indents smart
-set colorcolumn=80                " Create marker at column 80
-set number relativenumber         " Show relative line numbers
-set laststatus=2                  " Always show status line
-set backspace=indent,eol,start    " Make backspace reasonable
-set hidden                        " Allow hidden buffers
+
 set ignorecase                    " Enable case-insensitive search if lowercase
 set smartcase                     " Enable case-sensitive search
 set hlsearch                      " Highlight all search results
 set incsearch                     " Enable searching as you type
+
+set colorcolumn=80                " Create marker at column 80
+set number relativenumber         " Show relative line numbers
+set laststatus=2                  " Always show status line
+set backspace=indent,eol,start    " Make backspace reasonable
 set noerrorbells visualbell t_vb= " Disable audible bell
+set hidden                        " Allow hidden buffers
 set mouse+=a                      " Enable mouse support
 set noshowmode                    " Hide redundant mode information
 set scrolloff=5                   " Always show 5 lines above/below cursor
-set hidden                        " Allow hidden buffers
 
 " Use tab character for Makefiles
 autocmd FileType make setlocal noexpandtab 
 " Change indent size for OCaml
-autocmd FileType ocaml setlocal tabstop=2
-autocmd FileType ocaml setlocal softtabstop=2
-autocmd FileType ocaml setlocal shiftwidth=2
+autocmd FileType ocaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Disable 'Q' (enters Ex mode)
 nmap Q <Nop>
