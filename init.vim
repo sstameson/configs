@@ -7,6 +7,7 @@ Plug 'junegunn/fzf.vim'                             " Fuzzy finding
 
 Plug 'itchyny/lightline.vim'                        " Status bar
 Plug 'chriskempson/base16-vim'                      " Colorscheme
+Plug 'lark-parser/vim-lark-syntax'
 
 call plug#end()
 
@@ -29,7 +30,7 @@ set hlsearch                      " Highlight all search results
 set incsearch                     " Enable searching as you type
 
 set colorcolumn=80                " Create marker at column 80
-set number relativenumber         " Show relative line numbers
+set number                        " Show line numbers
 set laststatus=2                  " Always show status line
 set backspace=indent,eol,start    " Make backspace reasonable
 set noerrorbells visualbell t_vb= " Disable audible bell

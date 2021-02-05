@@ -5,6 +5,8 @@ alias vim='nvim'
 
 alias ocaml='rlwrap ocaml'
 
+alias scheme='rlwrap scheme'
+
 alias python='python3'
 
 # Enable syntax highlighting
