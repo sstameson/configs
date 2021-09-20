@@ -1,14 +1,19 @@
+# Use vi keybindings
+bindkey -v
+bindkey -v '^?' backward-delete-char
+
 # Enable syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set environment variables
 export PS1='%~ $ '
-export EDITOR='vim'
+export EDITOR=vim
 
 # Set aliases
 alias df='df -h'
-alias gc='git commit'
 alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
 alias ll='ls -lah'
 alias mv='mv -i'
 
