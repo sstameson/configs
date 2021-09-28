@@ -4,19 +4,21 @@ colorscheme ron
 highlight LineNr ctermfg=grey
 
 " Indentation
-set tabstop=4 shiftwidth=4 expandtab autoindent smartindent
+filetype plugin indent on
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab autoindent smartindent smarttab
 autocmd FileType make setlocal noexpandtab
-autocmd FileType ocaml setlocal tabstop=2 shiftwidth=2
-autocmd FileType haskell setlocal tabstop=2 shiftwidth=2
-autocmd FileType markdown setlocal tabstop=2 shiftwidth=2 wrap linebreak
-autocmd FileType text setlocal tabstop=2 shiftwidth=2 wrap linebreak
+autocmd FileType ocaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType markdown setlocal tabstop=2 shiftwidth=2 softtabstop=2 wrap linebreak
+autocmd FileType text setlocal tabstop=2 shiftwidth=2 softtabstop=2 wrap linebreak
 
 " Searching
 set ignorecase smartcase hlsearch incsearch
 
 " Misc
+set nocompatible
 set colorcolumn=80
-set nonumber
+set number
 set ruler
 set laststatus=2
 set backspace=indent,eol,start
@@ -38,10 +40,11 @@ vnoremap <expr> j v:count ? 'j' : 'gj'
 vnoremap <expr> k v:count ? 'k' : 'gk'
 
 nnoremap <CR> :noh<CR>
+nnoremap <c-p> :CtrlP<CR>
 
 let mapleader = ' '
 
-nnoremap <leader><leader> <C-^>
+nnoremap <leader><leader> <c-^>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
