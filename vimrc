@@ -1,7 +1,7 @@
 " Colorscheme
 syntax on
 colorscheme ron
-highlight LineNr ctermfg=DarkGrey
+highlight LineNr  ctermfg=DarkGrey
 highlight Comment ctermfg=DarkGrey
 
 " Indentation
@@ -11,7 +11,6 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType ocaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType markdown setlocal tabstop=2 shiftwidth=2 softtabstop=2 wrap linebreak colorcolumn=0 display+=lastline
-autocmd FileType vhdl setlocal tabstop=2 shiftwidth=2 softtabstop=2 wrap linebreak colorcolumn=0 display+=lastline
 autocmd FileType text setlocal tabstop=2 shiftwidth=2 softtabstop=2 wrap linebreak colorcolumn=0 display+=lastline
 autocmd FileType tex setlocal wrap linebreak display+=lastline
 
@@ -20,7 +19,7 @@ set ignorecase smartcase hlsearch incsearch
 
 " Misc
 set nocompatible
-set colorcolumn=90
+set colorcolumn=80
 set number
 set ruler
 set laststatus=2
@@ -34,6 +33,7 @@ set scrolloff=5
 set nowrap
 set guifont=Monaco:h16
 set guicursor=a:block-blinkoff0,i:ver25-blinkoff0
+set exrc
 
 let g:is_bash = 1
 
