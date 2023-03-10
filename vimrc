@@ -4,16 +4,17 @@
 "
 
 syntax on
-highlight LineNr     ctermfg=DarkGrey
-highlight Comment    ctermfg=DarkGreen
-highlight Constant   ctermfg=Magenta
-highlight Normal     ctermfg=White
-highlight Special    ctermfg=White
-highlight Identifier ctermfg=White
-highlight Statement  ctermfg=White
-highlight PreProc    ctermfg=White
-highlight Type       ctermfg=White
-highlight Operator   ctermfg=White
+highlight LineNr      ctermfg=DarkGrey
+highlight ColorColumn ctermbg=DarkRed
+highlight Comment     ctermfg=DarkGreen
+highlight Constant    ctermfg=Magenta
+highlight Normal      ctermfg=White
+highlight Special     ctermfg=White
+highlight Identifier  ctermfg=White
+highlight Statement   ctermfg=White
+highlight PreProc     ctermfg=White
+highlight Type        ctermfg=White
+highlight Operator    ctermfg=White
 
 "
 " indentation
@@ -70,6 +71,9 @@ let mapleader = ' '
 
 " swap beween two files
 nnoremap <leader><leader> <c-^>
+
+" allow visual block on windows
+nnoremap <leader>v <c-v>
 
 " move between windows with expected keys
 nnoremap <leader>h :wincmd h<CR>
