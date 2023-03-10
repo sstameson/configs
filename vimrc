@@ -4,17 +4,20 @@
 "
 
 syntax on
-highlight LineNr      ctermfg=DarkGrey
-highlight ColorColumn ctermbg=DarkRed
-highlight Comment     ctermfg=DarkGreen
-highlight Constant    ctermfg=Magenta
-highlight Normal      ctermfg=White
-highlight Special     ctermfg=White
-highlight Identifier  ctermfg=White
-highlight Statement   ctermfg=White
-highlight PreProc     ctermfg=White
-highlight Type        ctermfg=White
-highlight Operator    ctermfg=White
+colorscheme ron
+highlight Normal      ctermfg=NONE      ctermbg=NONE
+highlight Normal      guifg=#D4D7CF     guibg=#1f1f1f
+highlight LineNr      ctermfg=DarkGrey  guifg=#555753
+highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
+highlight Comment     ctermfg=DarkGreen guifg=#4E9A06
+highlight Constant    ctermfg=Magenta   guifg=#AD7FA8
+highlight Special     ctermfg=NONE      guifg=#D4D7CF
+highlight Identifier  ctermfg=NONE      guifg=#D3D7CF
+highlight Statement   ctermfg=NONE      guifg=#D3D7CF
+highlight PreProc     ctermfg=NONE      guifg=#D3D7CF
+highlight Type        ctermfg=NONE      guifg=#D3D7CF
+highlight Operator    ctermfg=NONE      guifg=#D3D7CF
+highlight MatchParen  ctermbg=DarkBlue ctermfg=LightBlue
 
 "
 " indentation
@@ -50,6 +53,7 @@ set mouse+=a
 set shortmess-=S
 set scrolloff=5
 set nowrap
+set guicursor=a:block-blinkoff0,i:ver25-blinkoff0
 
 "
 " rebindings
