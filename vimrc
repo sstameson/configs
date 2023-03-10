@@ -15,10 +15,8 @@ syntax on
 colorscheme default
 
 highlight Normal      ctermfg=NONE      ctermbg=NONE  term=NONE
-highlight Normal      guifg=#D4D7CF     guibg=#1f1f1f gui=NONE
-
-highlight Cursor      ctermfg=Black     ctermbg=White
-highlight Cursor      guifg=#000000     guibg=#ffffff
+highlight Normal      guifg=#D4D7CF     guibg=#1F1F1F gui=NONE
+highlight Cursor      guifg=#1F1F1F     guibg=#D4D7CF
 highlight LineNr      ctermfg=DarkGrey  guifg=#555753 term=NONE gui=NONE
 highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000 term=NONE gui=NONE
 
