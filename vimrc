@@ -1,46 +1,57 @@
+" nocompatible has many side-effects so it is set first
+set nocompatible
 
 "
 " colorscheme
 "
 
+" comments are dark green
+" constants are magenta
+" code is the default foreground/background color
+" all other text attributes are disabled
+" gui colors are based on the tango dark pallet
+
 syntax on
-colorscheme ron
-highlight Normal      ctermfg=NONE      ctermbg=NONE
-highlight Normal      guifg=#D4D7CF     guibg=#1f1f1f
-highlight LineNr      ctermfg=DarkGrey  guifg=#555753
-highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
-highlight Comment     ctermfg=DarkGreen guifg=#4E9A06
-highlight Constant    ctermfg=Magenta   guifg=#AD7FA8
-highlight Special     ctermfg=NONE      guifg=#D4D7CF
-highlight Identifier  ctermfg=NONE      guifg=#D3D7CF
-highlight Statement   ctermfg=NONE      guifg=#D3D7CF
-highlight PreProc     ctermfg=NONE      guifg=#D3D7CF
-highlight Type        ctermfg=NONE      guifg=#D3D7CF
-highlight Operator    ctermfg=NONE      guifg=#D3D7CF
-highlight MatchParen  ctermbg=DarkBlue ctermfg=LightBlue
+colorscheme default
+
+highlight Normal      ctermfg=NONE      ctermbg=NONE  term=NONE
+highlight Normal      guifg=#D4D7CF     guibg=#1f1f1f gui=NONE
+
+highlight Cursor      ctermfg=Black     ctermbg=White
+highlight Cursor      guifg=#000000     guibg=#ffffff
+highlight LineNr      ctermfg=DarkGrey  guifg=#555753 term=NONE gui=NONE
+highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000 term=NONE gui=NONE
+
+highlight Comment     ctermfg=DarkGreen guifg=#4E9A06 term=NONE gui=NONE
+highlight Constant    ctermfg=Magenta   guifg=#AD7FA8 term=NONE gui=NONE
+highlight Special     ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
+highlight Identifier  ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight Statement   ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight PreProc     ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight Type        ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight Operator    ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight MatchParen  ctermfg=LightBlue ctermbg=DarkBlue
 
 "
 " indentation
 "
 
 filetype plugin indent on
+set expandtab autoindent smartindent smarttab
 set tabstop=4 shiftwidth=4 softtabstop=4
-    \ expandtab autoindent smartindent smarttab
 autocmd FileType make     setlocal noexpandtab
 autocmd FileType ocaml    setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType haskell  setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType markdown setlocal tabstop=2 shiftwidth=2 softtabstop=2
-    \ wrap linebreak colorcolumn=0 display+=lastline
 autocmd FileType text     setlocal tabstop=2 shiftwidth=2 softtabstop=2
-    \ wrap linebreak colorcolumn=0 display+=lastline
-autocmd FileType tex      wrap linebreak colorcolumn=0 display+=lastline
+autocmd FileType markdown setlocal wrap linebreak display+=lastline
+autocmd FileType text     setlocal wrap linebreak display+=lastline
 
 "
 " misc
 "
 
 set ignorecase smartcase hlsearch incsearch
-set nocompatible
 set colorcolumn=80
 set number
 set ruler
@@ -54,6 +65,7 @@ set shortmess-=S
 set scrolloff=5
 set nowrap
 set guicursor=a:block-blinkoff0,i:ver25-blinkoff0
+set guifont=Monaco:h16
 
 "
 " rebindings
@@ -76,7 +88,7 @@ let mapleader = ' '
 " swap beween two files
 nnoremap <leader><leader> <c-^>
 
-" allow visual block on windows
+" allow visual block on windows (ctrl-v used for paste)
 nnoremap <leader>v <c-v>
 
 " move between windows with expected keys
