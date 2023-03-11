@@ -12,13 +12,16 @@ set nocompatible
 " gui colors are based on the tango dark pallet
 
 syntax on
-colorscheme default
+colorscheme default " needed for initialization
 
 highlight Normal      ctermfg=NONE      ctermbg=NONE  term=NONE
 highlight Normal      guifg=#D4D7CF     guibg=#1F1F1F gui=NONE
 highlight Cursor      guifg=#1F1F1F     guibg=#D4D7CF
 highlight LineNr      ctermfg=DarkGrey  guifg=#555753
 highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
+highlight Visual      ctermbg=DarkGrey  guifg=#555753
+highlight Search      ctermfg=Black     ctermbg=Yellow
+highlight Search      guifg=#000000     guibg=#FCE94F
 
 highlight Comment     ctermfg=DarkGreen guifg=#4E9A06 term=NONE gui=NONE
 highlight Constant    ctermfg=Magenta   guifg=#AD7FA8 term=NONE gui=NONE
