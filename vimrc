@@ -26,6 +26,8 @@ highlight Search      guifg=#000000     guibg=#FCE94F
 highlight Comment     ctermfg=DarkGreen guifg=#4E9A06 term=NONE gui=NONE
 highlight Constant    ctermfg=Magenta   guifg=#AD7FA8 term=NONE gui=NONE
 highlight Special     ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
+highlight SpecialKey  ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
+highlight Title       ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
 highlight Identifier  ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
 highlight Statement   ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
 highlight PreProc     ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
@@ -51,6 +53,8 @@ autocmd FileType text     setlocal wrap linebreak display+=lastline
 " misc
 "
 
+set path=.,,**
+set wildmenu
 set ignorecase smartcase hlsearch incsearch
 set colorcolumn=80
 set number
@@ -82,6 +86,9 @@ vnoremap <expr> k v:count ? 'k' : 'gk'
 
 " enter clears search highlights
 nnoremap <CR> :noh<CR>
+
+" ctrl-p finds files
+nnoremap <c-p> :find 
 
 let mapleader = ' '
 
