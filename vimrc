@@ -19,20 +19,20 @@ highlight Normal      guifg=#D4D7CF     guibg=#1F1F1F gui=NONE
 highlight Cursor      guifg=#1F1F1F     guibg=#D4D7CF
 highlight LineNr      ctermfg=DarkGrey  guifg=#555753
 highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
-highlight Visual      ctermbg=DarkGrey  guifg=#555753
+highlight Visual      ctermbg=LightGrey guifg=#555753
 highlight Search      ctermfg=Black     ctermbg=Yellow
 highlight Search      guifg=#000000     guibg=#FCE94F
 
-highlight Comment     ctermfg=DarkGreen guifg=#4E9A06 term=NONE gui=NONE
-highlight Constant    ctermfg=Magenta   guifg=#AD7FA8 term=NONE gui=NONE
-highlight Special     ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
-highlight SpecialKey  ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
-highlight Title       ctermfg=NONE      guifg=#D4D7CF term=NONE gui=NONE
-highlight Identifier  ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
-highlight Statement   ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
-highlight PreProc     ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
-highlight Type        ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
-highlight Operator    ctermfg=NONE      guifg=#D3D7CF term=NONE gui=NONE
+highlight Comment     ctermfg=DarkGreen   guifg=#4E9A06 term=NONE gui=NONE
+highlight Constant    ctermfg=DarkMagenta guifg=#AD7FA8 term=NONE gui=NONE
+highlight Special     ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+highlight SpecialKey  ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+highlight Title       ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+highlight Identifier  ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+highlight Statement   ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+highlight PreProc     ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+highlight Type        ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+highlight Operator    ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
 
 "
 " indentation
@@ -57,7 +57,7 @@ set path=.,,**
 set wildmenu
 set ignorecase smartcase hlsearch incsearch
 set colorcolumn=80
-set number
+set nonumber
 set ruler
 set laststatus=2
 set backspace=indent,eol,start
