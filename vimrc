@@ -11,28 +11,41 @@ set nocompatible
 " all other text attributes are disabled
 " gui colors are based on the tango dark pallet
 
+" picking custom colors is far more complicated than it should be, since
+" colorschemes revert all highlight settings
+" see this gist for details
+" https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
+
+function MyHighlights() abort
+    highlight Normal      ctermfg=NONE      ctermbg=NONE  term=NONE
+    highlight Normal      guifg=#D4D7CF     guibg=#1F1F1F gui=NONE
+    highlight Cursor      guifg=#1F1F1F     guibg=#D4D7CF
+    highlight LineNr      ctermfg=DarkGrey  guifg=#555753
+    highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
+    highlight Visual      ctermbg=LightGrey guifg=#555753
+    highlight Search      ctermfg=Black     ctermbg=Yellow
+    highlight Search      guifg=#000000     guibg=#FCE94F
+
+    highlight Comment     ctermfg=DarkGreen   guifg=#4E9A06 term=NONE gui=NONE
+    highlight Constant    ctermfg=DarkMagenta guifg=#AD7FA8 term=NONE gui=NONE
+    highlight Special     ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+    highlight SpecialKey  ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+    highlight Title       ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
+    highlight Identifier  ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+    highlight Statement   ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+    highlight PreProc     ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+    highlight Type        ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+    highlight Operator    ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+augroup END
+
 syntax on
-colorscheme default " needed for initialization
+colorscheme default
 
-highlight Normal      ctermfg=NONE      ctermbg=NONE  term=NONE
-highlight Normal      guifg=#D4D7CF     guibg=#1F1F1F gui=NONE
-highlight Cursor      guifg=#1F1F1F     guibg=#D4D7CF
-highlight LineNr      ctermfg=DarkGrey  guifg=#555753
-highlight ColorColumn ctermbg=DarkRed   guibg=#CC0000
-highlight Visual      ctermbg=LightGrey guifg=#555753
-highlight Search      ctermfg=Black     ctermbg=Yellow
-highlight Search      guifg=#000000     guibg=#FCE94F
-
-highlight Comment     ctermfg=DarkGreen   guifg=#4E9A06 term=NONE gui=NONE
-highlight Constant    ctermfg=DarkMagenta guifg=#AD7FA8 term=NONE gui=NONE
-highlight Special     ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
-highlight SpecialKey  ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
-highlight Title       ctermfg=NONE        guifg=#D4D7CF term=NONE gui=NONE
-highlight Identifier  ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
-highlight Statement   ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
-highlight PreProc     ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
-highlight Type        ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
-highlight Operator    ctermfg=NONE        guifg=#D3D7CF term=NONE gui=NONE
 
 "
 " indentation
