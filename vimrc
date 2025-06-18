@@ -80,21 +80,20 @@ augroup END
 " misc
 "
 
-set path=.,,**
-set wildmenu
 set ignorecase smartcase hlsearch incsearch
-set colorcolumn=0
-set nonumber
-set ruler
-set laststatus=2
 set backspace=indent,eol,start
+set mouse=a
 set noerrorbells visualbell t_vb=
 set hidden
 set noswapfile
-set mouse+=a
-set shortmess-=S
 set scrolloff=5
 set nowrap
+set nonumber
+set path=.,,**
+set wildmenu
+set ruler
+set laststatus=2
+set shortmess-=S
 
 "
 " rebindings
