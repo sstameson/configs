@@ -44,6 +44,7 @@ augroup END
 
 augroup MyFiles
     autocmd!
+    autocmd BufRead,BufNewFile *.hpp,*.cpp setfiletype c
     autocmd BufRead,BufNewFile *.metal setfiletype c
 augroup END
 
@@ -82,7 +83,7 @@ augroup END
 set path=.,,**
 set wildmenu
 set ignorecase smartcase hlsearch incsearch
-set colorcolumn=120
+set colorcolumn=0
 set nonumber
 set ruler
 set laststatus=2
