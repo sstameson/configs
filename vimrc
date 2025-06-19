@@ -96,6 +96,14 @@ set laststatus=2
 set shortmess-=S
 
 "
+" netrw
+"
+
+let g:netrw_banner=0     " disable banner
+let g:netrw_altv=1       " open splits to right
+let g:netrw_liststyle=3  " tree view
+
+"
 " rebindings
 "
 
